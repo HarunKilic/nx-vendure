@@ -1,11 +1,21 @@
-# vendure
 
-This library was generated with [Nx](https://nx.dev).
+# nx-vendure
 
-## Building
+## Install
 
-Run `nx build vendure` to build the library.
+Install with:
 
-## Running unit tests
+```sh
 
-Run `nx test vendure` to execute the unit tests via [Jest](https://jestjs.io).
+yarn -D add nx-vendure
+
+```
+
+## Generate a plugin
+
+Run `nx g nx-vendure:plugin cart --withUi` to generate a plugin.
+
+This will be generated in `libs\plugin-cart`
+
+options:
+`withUi` will add ui folder and starter setup. _Defaults to false_

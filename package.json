@@ -1,14 +1,14 @@
 {
   "name": "nx-vendure",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "scripts": {
     "build": "nx build nx-vendure",
     "link": "npm link ./dist/packages/vendure",
     "go-to-path": "cd dist/packages/vendure",
-    "publish": "npm run go-to-path && npm publish",
-    "publish:alpha": "npm run go-to-path && npm publish --tag alpha",
-    "publish:beta": "npm run go-to-path && npm publish --tag beta",
+    "publish:vendure": "./publish.sh",
+    "publish:alpha": "npm publish --tag alpha",
+    "publish:beta": "npm publish --tag beta",
     "release": "cd packages/vendure && npm run release"
   },
   "private": false,

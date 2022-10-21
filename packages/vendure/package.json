@@ -1,7 +1,22 @@
 {
   "name": "nx-vendure",
-  "version": "0.0.1",
+  "version": "0.0.7",
   "main": "src/index.js",
   "generators": "./generators.json",
-  "executors": "./executors.json"
+  "executors": "./executors.json",
+  "description": "Vendure Plugin for Nx",
+  "author": "Harun Kilic",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harunkilic/nx-vendure"
+  },
+  "scripts": {
+  },
+  "keywords": [
+    "nx",
+    "vendure",
+    "plugin",
+    "generators"
+  ]
 }
