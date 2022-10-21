@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "name": "vendure",
+  "version": "0.0.1",
+  "generators": {
+    "vendure": {
+      "factory": "./src/generators/vendure/generator",
+      "schema": "./src/generators/vendure/schema.json",
+      "description": "vendure generator"
+    },
+    "plugin": {
+      "factory": "./src/generators/plugin/generator",
+      "schema": "./src/generators/plugin/schema.json",
+      "description": "plugin generator"
+    }
+  }
+}

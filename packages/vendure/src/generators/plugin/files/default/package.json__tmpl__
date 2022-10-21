@@ -1,0 +1,4 @@
+{
+  "name": "@org/<%= projectName %>",
+  "version": "0.0.1"
+}

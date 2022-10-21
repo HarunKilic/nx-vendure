@@ -1,0 +1,9 @@
+import { PluginCommonModule, VendurePlugin } from "@vendure/core";
+
+@VendurePlugin({
+  imports: [PluginCommonModule],
+  configuration: (config) => {
+    return config;
+  }
+})
+export class <%= className %>Plugin {}

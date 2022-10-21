@@ -1,0 +1,24 @@
+import { NgModule } from '@angular/core'
+import { SharedModule, addNavMenuSection } from '@vendure/admin-ui/core'
+
+@NgModule({
+  imports: [SharedModule],
+  providers: [
+    addNavMenuSection(
+      {
+        id: '<%= fileName %>',
+        label: '<%= projectName %>',
+        items: [
+          {
+            id: '<%= fileName %>-item',
+            label: '<%= projectName %> Item',
+            routerLink: ["/extensions/<%= fileName %>"],
+            icon: "cursor-hand-open"
+          }
+        ]
+      },
+      "settings"
+    )
+  ]
+})
+export class <%= className %>SharedModule {}

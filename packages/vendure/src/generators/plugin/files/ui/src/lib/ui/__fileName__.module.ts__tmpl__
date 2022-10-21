@@ -1,0 +1,20 @@
+import { NgModule } from "@angular/core";
+import { RouterModule } from "@angular/router";
+import { SharedModule } from "@vendure/admin-ui/core";
+import { <%= className %>Component } from "./components/<%= fileName %>/<%= fileName %>.component";
+
+@NgModule({
+  imports: [
+    SharedModule,
+    RouterModule.forChild([
+      {
+        path: "",
+        pathMatch: "full",
+        component: <%= className %>Component,
+        data: { breadcrumb: "<%= className %>" },
+      },
+    ]),
+  ],
+  declarations: [<%= className %>Component],
+})
+export class <%= className %>Module {}

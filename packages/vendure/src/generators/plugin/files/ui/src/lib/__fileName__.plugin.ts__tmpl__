@@ -1,0 +1,25 @@
+import { PluginCommonModule, VendurePlugin } from "@vendure/core";
+import { AdminUiExtension } from "@vendure/ui-devkit/compiler";
+import path from "path";
+
+@VendurePlugin({
+  imports: [PluginCommonModule],
+  configuration: (config) => {
+    return config;
+  }
+})
+export class <%= className %>Plugin {
+  static ui: AdminUiExtension = {
+    extensionPath: path.join(__dirname, '../../../libs/<%= projectName %>/src/lib/ui'),
+    ngModules: [{
+      type: 'lazy',
+      route: '<%= fileName %>',
+      ngModuleName: '<%= className %>Module',
+      ngModuleFileName: '<%= fileName %>.module.ts'
+    }, {
+      type: 'shared',
+      ngModuleName: '<%= className %>SharedModule',
+      ngModuleFileName: '<%= fileName %>-shared.module.ts'
+    }]
+  }
+}
